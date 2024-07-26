@@ -2,7 +2,8 @@
 	import ProjectCard from './ProjectCard.svelte';
 
 	let gpeTechs: string[] = ['PHP', 'MySQL', 'ReactNative', 'Python', 'FastAPI', 'Mercure', 'RabbitMQ', 'DockerSwarm', 'Ansible'];
-	let tmdbTechs: string[] = ['ReactJS', 'Angular',
+	let tmdbTechs: string[] = ['ReactJS', 'Angular','Php', 'Symfony', 'MySQL'];
+	let quantumMotors: string[] = ['Ansible', 'DockerSwarm', 'fluentd', 'Kibana', 'Prometheus', 'BlackBoxExporter', 'Grafana'];
 </script>
 
 <div class="content">
@@ -47,7 +48,7 @@
 			</ul>
 		</div>
 	</ProjectCard>
-	<ProjectCard image="/projects/TMDB.png" name="The movie DB" techs={gpeTechs}
+	<ProjectCard image="/projects/TMDB.png" name="The movie DB" techs={tmdbTechs}
 							 link="https://www.themoviedb.org/?language=fr"
 							 longDescription={true}
 	>
@@ -75,38 +76,40 @@
 
 		</div>
 	</ProjectCard>
-	<ProjectCard image="/projects/cosport.jpg" name="CoSport" techs={gpeTechs}
-							 link="https://play.google.com/store/apps/details?id=com.gpe.cosport"
+	<ProjectCard image="/projects/quantum.png" name="Quantum Motor" techs={quantumMotors}
 							 longDescription={true}
 	>
 		<div slot="front">
 			<p>
-				CoSport est une application de gestion
+				Projet "Cloud" de mise en place d'une infrastructure applicative pour l'applicatif Quantum Motor.
 			</p>
 
 		</div>
 		<div slot="back">
 			<p>
-				CoSport est une application de gestion
+				L'objectif de ce projet était de mettre en place une infrastructure applicative pour l'applicatif Quantum Motor sur plusieurs serveurs simultanément.
 			</p>
+			<b>Compétences mises en œuvre :</b>
+			<ul>
+				<li>
+					Automatisation de déploiement (Ansible)
+				</li>
+				<li>
+					Orchestration de conteneurs (DockerSwarm)
+				</li>
+				<li>
+					Collecte de logs (fluentd)
+				</li>
+				<li>
+					Analyse de logs (Kibana)
+				</li>
+				<li>
+					Supervision (Prometheus, BlackBoxExporter, Grafana)
+				</li>
+			</ul>
 		</div>
 	</ProjectCard>
-	<ProjectCard image="/projects/cosport.jpg" name="CoSport" techs={gpeTechs}
-							 link="https://play.google.com/store/apps/details?id=com.gpe.cosport"
-							 longDescription={true}
-	>
-		<div slot="front">
-			<p>
-				CoSport est une application de gestion
-			</p>
 
-		</div>
-		<div slot="back">
-			<p>
-				CoSport est une application de gestion
-			</p>
-		</div>
-	</ProjectCard>
 </div>
 
 <style lang="scss">
