@@ -21,3 +21,15 @@
 <section id="schools">
 <Schools></Schools>
 </section>
+
+<style>
+	#skills {
+		margin-top: 20px;
+	}
+	#projects {
+		margin-top: 20px;
+	}
+	#schools {
+			margin-top: 20px;
+	}
+</style>
