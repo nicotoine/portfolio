@@ -15,7 +15,7 @@ import Header from '../components/Header/Header.svelte';
     }
 
     :global(:root){
-        --color-primary: #15274b;
+        --color-primary: rgba(21, 39, 75, 1);
         --color-secondary: #333;
         --color-tertiary: #777;
         --color-quaternary: #008DD5;

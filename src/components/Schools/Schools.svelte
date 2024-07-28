@@ -1,14 +1,44 @@
 <script lang="ts">
 
+import SchoolCard from './SchoolCard.svelte';
 </script>
 
 <main>
 	<h3>
 		Mon parcours scolaire
 	</h3>
-	<h4> Baccalauréat STI2D</h4>
-	<p> Lycée Maurice Genevoix - Ingré</p>
-	
+
+	<div>
+		<SchoolCard
+			image="/schools/Lycee.svg"
+			school="Lycée Maurice Genevoix"
+			description="Spécialisation en Sciences et Technologies de l'Industrie et du Développement Durable, option Systèmes d'Information et Numérique"
+			date="2019"
+			diploma="Bac STI2D"
+		/>
+		<SchoolCard
+			image="/schools/iut.jpg"
+			school="IUT du Havre"
+			description="Diplôme Universitaire de Technologie en Informatique"
+			date="2021"
+			diploma="DUT Informatique"
+		/>
+		<SchoolCard
+			image="/schools/iuto.jpg"
+			school="IUT d'Orléans"
+			description="Un an de Licence Informatique en alternance chez Arondor"
+			date="2023"
+			diploma="Licence Informatique"
+		/>
+		<SchoolCard
+			image="/schools/ETNA.png"
+			school="ETNA"
+			description="Deux ans de formation en alternance en informatique chez Arondor"
+			date="2024"
+			diploma="Master Informatique"
+		/>
+	</div>
+
 </main>
 
 <style lang="scss">
@@ -18,10 +48,19 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 20px;
+		height: 500px;
     h3 {
       font-size: 1.5rem;
       margin-bottom: 10px;
     }
+		div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
   }
 
 </style>
