@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import Overlay from './Commons/Overlay.svelte';
-	const pathToPdf = './cv/cv.pdf#navpanes=0&scrollbar=0';
+	const pathToPdf = './cv/cv.pdf#navpanes=0&scrollbar=0statusbar=0&messages=0&scrollbar=0&zoom=75';
 	import clickOutside from '../action/clickOutside';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
@@ -40,7 +40,7 @@
 					</button>
 				</header>
 				<main>
-						<iframe src={pathToPdf} {width} {height} title="PDF"  />
+						<iframe src={pathToPdf} {width} {height} title="nicolas-devos-cv"></iframe>
 				</main>
 			</div>
 		</main>

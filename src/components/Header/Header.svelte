@@ -5,7 +5,6 @@
 	import Logo from './Logo.svelte';
 	import ContactModal from '../ContactModal/ContactModal.svelte';
 	import CvDisplayer from '../CvDisplayer.svelte';
-	import NavItem from '../Nav/NavItem.svelte';
 
 	let scrollPosition: number = 0;
 	let displayContactModal: boolean = false;
