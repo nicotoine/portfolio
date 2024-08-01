@@ -3,8 +3,13 @@
 	import NavMenu from '../Nav/NavMenu.svelte';
 	import BurgerButton from './BurgerButton.svelte';
 	import Logo from './Logo.svelte';
+	import ContactModal from '../ContactModal/ContactModal.svelte';
+	import CvDisplayer from '../CvDisplayer.svelte';
+	import NavItem from '../Nav/NavItem.svelte';
 
 	let scrollPosition: number = 0;
+	let displayContactModal: boolean = false;
+	let displayCv: boolean = false;
 	onMount(() => {
 		console.log('Header mounted');
 		window.addEventListener('scroll', () => {
@@ -30,42 +35,56 @@
 				<BurgerButton stroke="white" on:click={()=>{showMenu= !showMenu}} />
 				{/if}
 		</span>
-		<div id="links">
-			<a href="/me">A propos</a>
-			<a href="/me">Projets</a>
-			<a href="/me">Contact</a>
+		<div class="links">
+			<a href="#projects">Projets</a>
+			<button on:click|preventDefault|stopPropagation={()=>{displayContactModal = true}}>Contact</button>
+			<button on:click|preventDefault|stopPropagation={()=>{displayCv = true}}>CV</button>
 		</div>
 	</main>
-	<NavMenu display={showMenu}></NavMenu>
+	<NavMenu display={showMenu} class="links">
+		<a href="#projects">Projets</a>
+		<button on:click|preventDefault|stopPropagation={()=>{displayContactModal = true}}>Contact</button>
+		<button on:click|preventDefault|stopPropagation={()=>{displayCv = true}}>CV</button>
+	</NavMenu>
 </header>
-
+<ContactModal bind:display={displayContactModal}></ContactModal>
+<CvDisplayer bind:display={displayCv}></CvDisplayer>
 <style lang="scss">
   @import '../../../static/variables';
 
   .burgerIcon {
     display: none;
-    @media only screen and (max-width: $sm) {
+    @media only screen and (max-width: $lg) {
       display: block;
     }
   }
 
+
   header {
 		position: sticky;
 		top: 0;
-
-
 		background-color: transparent;
-    @media only screen and (max-width: $xl) {
-			background-color: var(--color-primary);
-    }
-
 		z-index: 5;
     max-height: fit-content;
     transition: all 0.5s;
 
+    @media only screen and (max-width: $xl) {
+      background-color: var(--color-primary);
+    }
+
     &.opacity {
       background-color: white;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			#logo {
+				opacity: 1;
+      }
+      .links {
+
+        a,button {
+          color: black;
+        }
+
+      }
     }
     main {
       display: flex;
@@ -76,25 +95,36 @@
 
       #logo {
         width: 40vw;
+        opacity: 1;
+
         @media only screen and (min-width: $lg) {
           width: 13vw;
+          opacity: 0;
+
         }
       }
     }
 
 
-    #links {
+    .links {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-end;
       gap: 20px;
-      @media only screen and (max-width: $sm) {
+			button {
+				background: transparent;
+				border: none;
+				cursor: pointer;
+          margin: 0 !important;
+          padding: 0 !important;
+      }
+      @media only screen and (max-width: $lg) {
         display: none;
       }
 
-      a {
-        color: var(--color-secondary);
+      a,button {
+        color: white;
         text-decoration: none;
         font-size: clamp(1rem, 2vw, 1.5rem);
         font-weight: 500;

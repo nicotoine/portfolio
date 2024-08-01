@@ -33,9 +33,11 @@
   @import '../../static/variables';
   @media only screen and (max-width: $xl) {
     div {
+			padding-top: 100px;
       header {
 				background-color: var(--color-primary);
 				padding-bottom: 50px;
+
         main {
           // add before blueRound.svg to the path
           display: flex;
@@ -82,13 +84,17 @@
     }
   }
   @media only screen and (min-width: $xl) {
+
     div {
       display: flex;
       align-items: center;
-			overflow: hidden;
-      &.mainDiv {
-        margin-top: 50px;
 
+      &.mainDiv {
+        padding: 50px 0 50px;
+        background-color: transparent;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
       }
 
       header {
@@ -102,7 +108,7 @@
           top: 0;
           transform: translateY(-35%);
           z-index: -1;
-          background-color: var(--color-primary);
+          background-color:	white;
 					border-radius: 0 50% 50% 0;
         }
 
@@ -128,7 +134,7 @@
             h1 {
               margin: 0;
               font-size: 3em;
-              color: white;
+              color: var(--color-primary);
             }
 
             h2 {

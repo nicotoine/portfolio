@@ -7,29 +7,44 @@
 	import Projetcs from '../../components/Projects/Projetcs.svelte';
 
 	onMount(() => {
-		if(!browser) return;
+		if (!browser) return;
 		document.title = 'Nicolas Devos - Développeur FullStack';
 	});
 </script>
-<Presentation></Presentation>
+
+<section id="presentation">
+	<Presentation></Presentation>
+</section>
 <section id="skills">
-<Skills></Skills>
+	<Skills></Skills>
 </section>
 <section id="projects">
-<Projetcs></Projetcs>
+	<Projetcs></Projetcs>
 </section>
 <section id="schools">
-<Schools></Schools>
+	<Schools></Schools>
 </section>
 
 <style>
-	#skills {
-		margin-top: 20px;
-	}
-	#projects {
-		margin-top: 20px;
-	}
-	#schools {
-			margin-top: 20px;
-	}
+    #presentation {
+        background-color: var(--color-primary);
+        position: relative;
+        z-index: 1;
+        overflow: visible;
+				top: -100px;
+				margin-bottom: -100px;
+    }
+
+    #skills {
+        position: relative;
+        z-index: 2;
+    }
+
+    #projects {
+        margin-top: 20px;
+    }
+
+    #schools {
+        margin-top: 20px;
+    }
 </style>

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 	import SchoolProjects from './SchoolProjects.svelte';
+	import EnterpriseProject from './EnterpriseProject.svelte';
+	import PersonnalProjects from './PersonnalProjects.svelte';
 
 	let projectsTypes: string[] = ['Scolaires', 'Professionnels', 'Personnels'];
 	let index: number = 0;
@@ -11,16 +13,16 @@
 	const handleChangeType = (i: number) => {
 		lastIndex = index;
 		index = i;
-		x = index > lastIndex ? "-100%" : "100%" ;
+		x = index > lastIndex ? "100%" : "-100%" ;
 		const projects = document.getElementById('projects');
 		projects?.scrollIntoView({behavior: "smooth"});
 	};
 </script>
 
 <main id="projects">
-	<h3 >
+	<h2 >
 		Projets réalisés
-	</h3>
+	</h2>
 	<header>
 		<ul>
 			{#each projectsTypes as type, i}
@@ -37,12 +39,12 @@
 	{/if}
 	{#if projectsTypes[index] === 'Professionnels'}
 		<main in:fly={{ x: x }}>
-			<SchoolProjects></SchoolProjects>
+			<EnterpriseProject></EnterpriseProject>
 		</main>
 	{/if}
 	{#if projectsTypes[index] === 'Personnels'}
 		<main in:fly={{ x: x}}>
-			<SchoolProjects></SchoolProjects>
+			<PersonnalProjects></PersonnalProjects>
 		</main>
 	{/if}
 
@@ -57,9 +59,10 @@
     align-items: center;
     gap: 20px;
 
-    h3 {
-      font-size: 1.5rem;
+    h2 {
+      font-size: 1.7rem;
       margin-bottom: 10px;
+			color: var(--color-primary);
     }
 
     header {

@@ -121,8 +121,13 @@
     background: #eee;
     color: var(--color-secondary);
     flex-direction: column;
-    margin-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
+		padding-top: 20px;
+		h2 {
+			font-size: 1.7rem;
+			margin-bottom: 20px;
+			color: var(--color-primary);
+		}
     & > div {
 		@media only screen and (min-width: $md) {
 			height: 200px;

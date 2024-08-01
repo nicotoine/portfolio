@@ -4,9 +4,9 @@ import SchoolCard from './SchoolCard.svelte';
 </script>
 
 <main>
-	<h3>
+	<h2>
 		Mon parcours scolaire
-	</h3>
+	</h2>
 
 	<div>
 		<SchoolCard
@@ -19,21 +19,21 @@ import SchoolCard from './SchoolCard.svelte';
 		<SchoolCard
 			image="/schools/iut.jpg"
 			school="IUT du Havre"
-			description="Diplôme Universitaire de Technologie en Informatique"
+			description="Deux ans d'études en informatique, spécialisation en développement orienté objet"
 			date="2021"
 			diploma="DUT Informatique"
 		/>
 		<SchoolCard
 			image="/schools/iuto.jpg"
 			school="IUT d'Orléans"
-			description="Un an de Licence Informatique en alternance chez Arondor"
+			description="Un an de Licence Informatique web et mobile en alternance chez Arondor"
 			date="2023"
 			diploma="Licence Informatique"
 		/>
 		<SchoolCard
 			image="/schools/ETNA.png"
 			school="ETNA"
-			description="Deux ans de formation en alternance en informatique chez Arondor"
+			description="Deux ans de formation avec une spécialisation en développement web et mobile en alternance chez Arondor"
 			date="2024"
 			diploma="Master Informatique"
 		/>
@@ -50,8 +50,9 @@ import SchoolCard from './SchoolCard.svelte';
 		gap: 20px;
 		height: 500px;
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       margin-bottom: 10px;
+			color: var(--color-primary);
     }
 		div {
 			display: flex;

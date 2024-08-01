@@ -18,9 +18,8 @@
 </script>
 
 {#if display}
-	<ul transition:slide>
-		<NavItem path="/" name="Home"></NavItem>
-		<NavItem path="/about" name="About"></NavItem>
+	<ul transition:slide {...$$restProps}>
+		<slot></slot>
 	</ul>
 {/if}
 

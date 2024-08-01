@@ -12,7 +12,9 @@
 
 <div class="cards">
 	<div class="card card-front" class:showBack>
-		<img class="card-img" src={image} alt='{name} image'>
+		<div class="img-container">
+			<img class="card-img" src={image} alt='{name} image' style="{$$restProps.imgStyle}">
+		</div>
 		<div class="card-content">
 			<div class="card-title">
 				{#if link}
@@ -69,7 +71,7 @@
     max-width: 24rem;
     border-radius: 0.375rem;
     overflow: hidden;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+   	box-shadow: 0 2px 14px 1px rgba(0,0,0,0.1);
     transform-style: preserve-3d;
 
     height: 700px;
@@ -83,9 +85,18 @@
     transform: rotateY(-180deg);
   }
 
-
+	.img-container{
+		width: 100%;
+		height: 24rem;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 1px solid rgba(237, 242, 247, 0.6);
+	}
   .card-img {
     width: 100%;
+		object-position: center;
   }
 
   .card-content {

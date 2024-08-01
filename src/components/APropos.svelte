@@ -25,12 +25,13 @@
 		h3 {
 			font-size: 1.5rem;
 			margin-bottom: 10px;
+			color: white;
 		}
 
 		p {
 			font-size: 1rem;
 			margin-bottom: 10px;
-			color: var(--color-tertiary);
+			color: #ccc;
 			text-align: justify;
 		}
   }
