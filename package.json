@@ -34,6 +34,7 @@
 	"dependencies": {
 		"@eslint/js": "^9.7.0",
 		"@svelte-plugins/tooltips": "^3.0.1",
+		"@sveltejs/adapter-static": "^3.0.2",
 		"siema": "^1.5.1"
 	}
 }

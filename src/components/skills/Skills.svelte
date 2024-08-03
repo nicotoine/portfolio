@@ -129,13 +129,14 @@
 			color: var(--color-primary);
 		}
     & > div {
-		@media only screen and (min-width: $md) {
-			height: 200px;
-		}
+
       width: 80%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+      @media only screen and (min-width: $md) {
+        height: 200px;
+      }
     }
   }
 	div.skill {

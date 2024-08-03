@@ -5,8 +5,6 @@
 	export let date: string = '2018-2023';
 	export let diploma: string = 'Expert en informatique';
 
-	export let display: boolean = false;
-
 </script>
 <div class="cards">
 	<div class="card card-front" style="background-image: url({image})" />
