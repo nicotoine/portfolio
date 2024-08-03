@@ -31,7 +31,7 @@
 		p {
 			font-size: 1rem;
 			margin-bottom: 10px;
-			color: #ccc;
+			color: #eee;
 			text-align: justify;
 		}
   }

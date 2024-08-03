@@ -26,6 +26,8 @@
 </section>
 
 <style>
+
+
     #presentation {
         background-color: var(--color-primary);
         position: relative;
@@ -47,4 +49,5 @@
     #schools {
         margin-top: 20px;
     }
+
 </style>
