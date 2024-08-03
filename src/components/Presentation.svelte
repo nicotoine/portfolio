@@ -3,13 +3,15 @@
 	import PrimaryButton from './Commons/PrimaryButton.svelte';
 	import ContactModal from './ContactModal/ContactModal.svelte';
 	import MailIcon from './Icon/MailIcon.svelte';
+	import { base } from "$app/paths";
 
 	let displayContactModal: boolean = false;
+
 </script>
 <div class="mainDiv">
 	<header>
 		<main>
-			<img src="me.jpg" alt="me" />
+			<img src="{base}/me.jpg" alt="me" />
 			<div>
 				<h1>Nicolas Devos</h1>
 				<h2>Développeur FullStack</h2>

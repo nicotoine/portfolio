@@ -2,7 +2,7 @@
 
 	import InformationModal from '../InformationModal/InformationModal.svelte';
 	import PhoneIcon from '../Icon/PhoneIcon.svelte';
-
+	import { base } from "$app/paths";
 	export let display: boolean = false;
 	let email: string = 'nicolasdevos.45@gmail.com';
 	let linkedin: string = 'https://www.linkedin.com/in/nicolas-devos-897505192/';
@@ -36,7 +36,7 @@
 		</span>
 		<span id="linkedin">
 			<span class="icon">
-				<img src="LinkedIn.png" alt="linkedin" width="25px">
+				<img src="{base}/LinkedIn.png" alt="linkedin" width="25px">
 			</span>
 			<a href="{linkedin}">Linkedin</a>
 		</span>

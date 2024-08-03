@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from "$app/paths";
 	export let school: string = 'Epitech';
 	export let image: string = 'epitech.png';
 	export let description: string = 'Epitech est une école d\'informatique qui forme en 5 ans des experts en informatique.';
@@ -7,8 +8,8 @@
 
 </script>
 <div class="cards">
-	<div class="card card-front" style="background-image: url({image})" />
-	<div class="card card-back" style="background-image: url({image})">
+	<div class="card card-front" style="background-image: url({base}{image})" />
+	<div class="card card-back" style="background-image: url({base}{image})">
 		<div class="card-content">
 			<div class="title">
 			<h3>{school}</h3>

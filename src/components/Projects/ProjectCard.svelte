@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PrimaryButton from '../Commons/PrimaryButton.svelte';
+	import { base } from "$app/paths";
 
 	export let image: string = '';
 	export let name: string = '';
@@ -13,7 +14,7 @@
 <div class="cards">
 	<div class="card card-front" class:showBack>
 		<div class="img-container">
-			<img class="card-img" src={image} alt='{name} image' style="{$$restProps.imgStyle}">
+			<img class="card-img" src="{base}{image}" alt='{name} image' style="{$$restProps.imgStyle}">
 		</div>
 		<div class="card-content">
 			<div class="card-title">

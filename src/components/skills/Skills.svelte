@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import { tooltip } from "@svelte-plugins/tooltips";
+	import { base } from "$app/paths";
 
 	let skills: { iconPath: string, name: string}[] = [];
 
@@ -94,7 +95,7 @@
 			<Carousel autoplay={2000} {perPage}>
 				{#each skills as skill, index (index)}
 					<div class="skill" title="{skill.name}" use:tooltip={{position:"left"}}>
-						<img src={skill.iconPath} alt={skill.name}/>
+						<img src="{base}/{skill.iconPath}" alt={skill.name}/>
 					</div>
 				{/each}
 			</Carousel>
@@ -102,7 +103,7 @@
 			<Carousel autoplay={2000} {perPage}>
 				{#each skills as skill, index (index)}
 					<div  class="skill" title="{skill.name}" use:tooltip={{position:"left"}}>
-						<img src={skill.iconPath} alt={skill.name} />
+						<img src="{base}/{skill.iconPath}" alt={skill.name} />
 					</div>
 				{/each}
 			</Carousel>
