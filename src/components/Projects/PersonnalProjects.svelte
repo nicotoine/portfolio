@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ProjectCard from './ProjectCard.svelte';
 
-	let ijc: string[] = ['Java','Svelte','SpringBoot','Maven','Docker','Sass','TypeScript', 'GraphQL'];
+	let ijc: string[] = ['Java', 'Svelte', 'SpringBoot', 'Maven', 'Docker', 'Sass', 'TypeScript', 'GraphQL'];
 </script>
 
 <div class="content">
@@ -11,14 +11,15 @@
 	>
 		<div slot="front">
 			<p>
-					Etant membre du bureau du club de Judo d'Ingré, j'ai mis en place un intranet pour la gestion des membres du club.
+				En tant que membre du bureau du club de judo d'Ingré, j'ai mis en place un intranet pour gérer les membres du
+				club.
 			</p>
 		</div>
 		<div slot="back">
 			<p>
-				L'objectif de ce projet était de mettre en place un intranet pour la gestion des membres du club de Judo d'Ingré.
-				J'ai également mis en place une partie publique pour les inscriptions aux cours. Cette partie publique est
-				vouée à être améliorée pour permettre aux membres de reserver ou d'acheter des produits du club.
+				L'objectif de ce projet était de créer un intranet pour la gestion des membres du club de judo d'Ingré. J'ai
+				également développé une section publique pour les inscriptions aux cours. Cette partie publique est destinée à
+				être améliorée pour permettre aux membres de réserver ou d'acheter des produits du club.
 			</p>
 			<b>Compétences mises en œuvre :</b>
 			<ul>

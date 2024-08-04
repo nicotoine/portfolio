@@ -22,15 +22,16 @@
 		if (!browser) return;
 
 		function caculateZoom() {
+
+			// if width or height is less than     width: 793px;
 			let width = window.innerWidth;
-			if (width > 768) {
-				zoom = 1;
-				return;
+			if (width < 793) {
+				// calculate zoom to display a4 page on mobile
+				zoom = 0.4
+				// scroll to middle of the page x axis
+				 section.scrollLeft = (section.scrollWidth - section.clientWidth) / 2;
+
 			}
-			let a4Width = 2480;
-			zoom = width / a4Width;
-			// scroll to middle of the page x axis
-			// section.scrollLeft = (section.scrollWidth - section.clientWidth) / 2;
 
 		}
 

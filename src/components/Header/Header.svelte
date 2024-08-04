@@ -4,7 +4,6 @@
 	import BurgerButton from './BurgerButton.svelte';
 	import Logo from './Logo.svelte';
 	import ContactModal from '../ContactModal/ContactModal.svelte';
-	import CvDisplayer from '../CvDisplayer.svelte';
 	import { base } from '$app/paths';
 
 	let scrollPosition: number = 0;

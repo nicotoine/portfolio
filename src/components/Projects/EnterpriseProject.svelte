@@ -2,7 +2,7 @@
 	import ProjectCard from './ProjectCard.svelte';
 
 	let arit: string[] = ['PHP', 'MySQL', 'Linux', 'Apache', 'JavaScript', 'Ajax', 'Docker'];
-	let fast2: string[] = ['Java','Svelte','SpringBoot','Maven','Docker','Sass','TypeScript','OpenSearch'];
+	let fast2: string[] = ['Java', 'Svelte', 'SpringBoot', 'Maven', 'Docker', 'Sass', 'TypeScript', 'OpenSearch'];
 </script>
 
 <div class="content">
@@ -13,17 +13,14 @@
 	>
 		<div slot="front">
 			<p>
-
 				Responsable technique de l'application de gestion des patients transplantés rénaux pour l'Association de
-				Recherche Immunologie et Transplantation.
+				Recherche en Immunologie et Transplantation.
 			</p>
 		</div>
 		<div slot="back">
 			<p>
-				Mon rôle était de gérer l'application de gestion des patients transplantés rénaux pour l'ARIT.
-
-				Je devais assurer la maintenance de l'application, la mise en place de nouvelles fonctionnalités et la
-				correction de bugs.
+				Mon rôle consistait à gérer l'application de gestion des patients transplantés rénaux pour l'ARIT. Je devais
+				assurer la maintenance de l'application, mettre en place de nouvelles fonctionnalités et corriger les bugs.
 			</p>
 			<b>Compétences mises en œuvre :</b>
 			<ul>
@@ -58,8 +55,8 @@
 		</div>
 		<div slot="back">
 			<p>
-				L'objectif de ce projet était de migrer l'application Fast2 de GWT vers Svelte. J'étais responsable de la
-				partie front-end de l'application.
+				L'objectif de ce projet était de migrer l'application Fast2 de GWT vers Svelte. J'étais responsable du
+				développement de la partie front-end de l'application.
 			</p>
 			<b>Compétences mises en œuvre :</b>
 			<ul>

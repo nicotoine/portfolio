@@ -2,7 +2,7 @@
 	import ProjectCard from './ProjectCard.svelte';
 
 	let gpeTechs: string[] = ['PHP', 'MySQL', 'ReactNative', 'Python', 'FastAPI', 'Mercure', 'RabbitMQ', 'DockerSwarm', 'Ansible'];
-	let tmdbTechs: string[] = ['ReactJS', 'Angular','Php', 'Symfony', 'MySQL'];
+	let tmdbTechs: string[] = ['ReactJS', 'Angular', 'Php', 'Symfony', 'MySQL'];
 	let quantumMotors: string[] = ['Ansible', 'DockerSwarm', 'fluentd', 'Kibana', 'Prometheus', 'BlackBoxExporter', 'Grafana'];
 </script>
 
@@ -20,7 +20,8 @@
 		</div>
 		<div slot="back">
 			<p>
-				L'objectif de ce projet était de créer une application mobile de mise en relation d'amateurs de sport.
+				L'objectif de ce projet était de créer une application mobile permettant de mettre en relation des amateurs de
+				sport.
 			</p>
 			<b>Compétences mises en œuvre :</b>
 			<ul>
@@ -60,8 +61,8 @@
 		</div>
 		<div slot="back">
 			<p>
-				L'objectif de ce projet était de reproduire l'application The Movie DB en ReactJS et Angular pour faire un
-				benchmark des deux technologies.
+				L'objectif de ce projet était de reproduire l'application The Movie DB en ReactJS et en Angular afin de comparer
+				les deux technologies.
 			</p>
 			<b>Protocole d’expérimentation :</b>
 			<ul>
@@ -81,13 +82,14 @@
 	>
 		<div slot="front">
 			<p>
-				Projet "Cloud" de mise en place d'une infrastructure applicative pour l'applicatif Quantum Motor.
+				Projet "Cloud" visant à mettre en place une infrastructure applicative pour l'application Quantum Motor.
 			</p>
 
 		</div>
 		<div slot="back">
 			<p>
-				L'objectif de ce projet était de mettre en place une infrastructure applicative pour l'applicatif Quantum Motor sur plusieurs serveurs simultanément.
+
+				L'objectif de ce projet était de déployer une infrastructure applicative pour l'application Quantum Motor sur plusieurs serveurs simultanément.
 			</p>
 			<b>Compétences mises en œuvre :</b>
 			<ul>

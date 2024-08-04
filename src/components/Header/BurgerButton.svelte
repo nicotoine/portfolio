@@ -18,7 +18,7 @@
 	button {
 		width: 30px;
 		height: 30px;
-		border-radius: 8px;
+		border-radius: 4px;
 		background-color: transparent;
 		border: 1px solid #ccc;
 		cursor: pointer;
