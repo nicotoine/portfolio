@@ -7,6 +7,7 @@
 	import CvInformation from './CvInformation.svelte';
 	import CvLangages from './CvLangages.svelte';
 	import CvFrameworks from './CvFrameworks.svelte';
+	import CvDatabase from './CvDatabase.svelte';
 </script>
 
 <Page size={PageSizes.A4}>
@@ -30,6 +31,9 @@
 			<CvFrameworks>
 				<h3 slot="header">Frameworks</h3>
 			</CvFrameworks>
+			<CvDatabase>
+				<h3 slot="header">Base de données</h3>
+			</CvDatabase>
 		</aside>
 	</main>
 </Page>
