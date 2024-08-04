@@ -13,45 +13,14 @@
 	import { browser } from '$app/environment';
 	import { Fa } from 'svelte-fa';
 	import { faDownload } from '@fortawesome/free-solid-svg-icons';
-	import "@fontsource/poppins"; // Defaults to weight 400
-
-	// caculate zoom to display a4 page on mobile
-	let zoom: number = 1;
-	let section: HTMLElement;
-	onMount(() => {
-		if (!browser) return;
-
-		function caculateZoom() {
-
-			// if width or height is less than     width: 793px;
-			let width = window.innerWidth;
-			if (width < 793) {
-				// calculate zoom to display a4 page on mobile
-				zoom = 0.4
-				// scroll to middle of the page x axis
-				 section.scrollLeft = (section.scrollWidth - section.clientWidth) / 2;
-
-			}
-
-		}
-
-		window.addEventListener('resize', caculateZoom);
-
-		caculateZoom();
-
-		return () => {
-			window.removeEventListener('resize', caculateZoom);
-		};
-	});
-
-
+	import '@fontsource/poppins'; // Defaults to weight 400
 
 </script>
 
-<section style="zoom: {zoom}" bind:this={section}>
+<section>
 	<Page size={PageSizes.A4}>
-		<a href="{base}/cv/cv.pdf" download="cv.pdf" >
-			<Fa icon={faDownload}  />
+		<a href="{base}/cv/cv.pdf" download="cv.pdf">
+			<Fa icon={faDownload} />
 			Télécharger le CV
 		</a>
 		<CvHeader></CvHeader>
@@ -93,22 +62,29 @@
   * {
     color: var(--cv-quaternary-color);
     font-size: 12px;
-		font-family: 'Poppins', sans-serif;
-		line-height: 1.3;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.3;
   }
 
+	section {
+		zoom: 1;
+		@media (max-width: 768px) {
+			zoom: 0.4;
+		}
+	}
 
-    a {
-      color: var(--cv-primary-color);
-      text-decoration: none;
-      display: block;
-      padding: 10px;
-      background-color: var(--cv-secondary-color);
-      margin: 10px 0 ;
-			position: absolute;
-			top: 0;
-      right: 5px;
-    }
+
+  a {
+    color: var(--cv-primary-color);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: var(--cv-secondary-color);
+    margin: 10px 0;
+    position: absolute;
+    top: 0;
+    right: 5px;
+  }
 
   main {
     display: grid;
