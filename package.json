@@ -34,6 +34,7 @@
 	"type": "module",
 	"dependencies": {
 		"@eslint/js": "^9.7.0",
+		"@fontsource/poppins": "^5.0.14",
 		"@fortawesome/free-solid-svg-icons": "^6.6.0",
 		"@svelte-plugins/tooltips": "^3.0.1",
 		"@sveltejs/adapter-static": "^3.0.2",

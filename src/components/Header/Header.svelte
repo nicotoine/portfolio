@@ -5,10 +5,10 @@
 	import Logo from './Logo.svelte';
 	import ContactModal from '../ContactModal/ContactModal.svelte';
 	import CvDisplayer from '../CvDisplayer.svelte';
+	import { base } from '$app/paths';
 
 	let scrollPosition: number = 0;
 	let displayContactModal: boolean = false;
-	let displayCv: boolean = false;
 
 	onMount(() => {
 		console.log('Header mounted');
@@ -17,6 +17,7 @@
 		});
 	});
 	let showMenu: boolean = false;
+
 </script>
 
 <header id="navBar" class:opacity={scrollPosition > 0}>
@@ -38,17 +39,16 @@
 		<div class="links">
 			<a href="#projects">Projets</a>
 			<button on:click|preventDefault|stopPropagation={()=>{displayContactModal = true}}>Contact</button>
-			<button on:click|preventDefault|stopPropagation={()=>{displayCv = true}}>CV</button>
+			<a href="{base}/cv">Cv</a>
 		</div>
 	</main>
 	<NavMenu display={showMenu} class="links">
 		<a href="#projects">Projets</a>
 		<button on:click|preventDefault|stopPropagation={()=>{displayContactModal = true}}>Contact</button>
-		<button on:click|preventDefault|stopPropagation={()=>{displayCv = true}}>CV</button>
+		<a href="{base}/cv">Cv</a>
 	</NavMenu>
 </header>
 <ContactModal bind:display={displayContactModal}></ContactModal>
-<CvDisplayer bind:display={displayCv}></CvDisplayer>
 <style lang="scss">
   @import '../../../static/variables';
 

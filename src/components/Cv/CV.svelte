@@ -8,66 +8,126 @@
 	import CvLangages from './CvLangages.svelte';
 	import CvFrameworks from './CvFrameworks.svelte';
 	import CvDatabase from './CvDatabase.svelte';
+	import { base } from '$app/paths';
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+	import { Fa } from 'svelte-fa';
+	import { faDownload } from '@fortawesome/free-solid-svg-icons';
+	import "@fontsource/poppins"; // Defaults to weight 400
+
+	// caculate zoom to display a4 page on mobile
+	let zoom: number = 1;
+	let section: HTMLElement;
+	onMount(() => {
+		if (!browser) return;
+
+		function caculateZoom() {
+			let width = window.innerWidth;
+			if (width > 768) {
+				zoom = 1;
+				return;
+			}
+			let a4Width = 2480;
+			zoom = width / a4Width;
+			// scroll to middle of the page x axis
+			// section.scrollLeft = (section.scrollWidth - section.clientWidth) / 2;
+
+		}
+
+		window.addEventListener('resize', caculateZoom);
+
+		caculateZoom();
+
+		return () => {
+			window.removeEventListener('resize', caculateZoom);
+		};
+	});
+
+
+
 </script>
 
-<Page size={PageSizes.A4}>
-	<CvHeader></CvHeader>
-	<main>
-		<div>
-			<CvWorkExperience>
-				<h3 slot="header">Expérience professionnelle</h3>
-			</CvWorkExperience>
-			<CVSchool>
-				<h3 slot="header">Formation</h3>
-			</CVSchool>
-		</div>
-		<aside>
-			<CvInformation>
-				<h3 slot="header">Informations</h3>
-			</CvInformation>
-			<CvLangages>
-				<h3 slot="header">Languages</h3>
-			</CvLangages>
-			<CvFrameworks>
-				<h3 slot="header">Frameworks</h3>
-			</CvFrameworks>
-			<CvDatabase>
-				<h3 slot="header">Base de données</h3>
-			</CvDatabase>
-		</aside>
-	</main>
-</Page>
+<section style="zoom: {zoom}" bind:this={section}>
+	<Page size={PageSizes.A4}>
+		<a href="{base}/cv/cv.pdf" download="cv.pdf" >
+			<Fa icon={faDownload}  />
+			Télécharger le CV
+		</a>
+		<CvHeader></CvHeader>
+		<main>
+			<div>
+				<CvWorkExperience>
+					<h3 slot="header">Expérience professionnelle</h3>
+				</CvWorkExperience>
+				<CVSchool>
+					<h3 slot="header">Formation</h3>
+				</CVSchool>
+			</div>
+			<aside>
+				<CvInformation>
+					<h3 slot="header">Informations</h3>
+				</CvInformation>
+				<CvLangages>
+					<h3 slot="header">Languages</h3>
+				</CvLangages>
+				<CvFrameworks>
+					<h3 slot="header">Frameworks</h3>
+				</CvFrameworks>
+				<CvDatabase>
+					<h3 slot="header">Base de données</h3>
+				</CvDatabase>
+			</aside>
+		</main>
+	</Page>
+</section>
 
 <style lang="scss">
   :root {
     --cv-primary-color: #303843;
     --cv-secondary-color: #ddd;
     --cv-tertiary-color: #bbb;
-		--cv-quaternary-color: #666;
+    --cv-quaternary-color: #666;
   }
-	* {
 
-		font-family: 'Times New Roman', Times, serif;
+  * {
     color: var(--cv-quaternary-color);
-    font-size: 14px;
+    font-size: 12px;
+		font-family: 'Poppins', sans-serif;
+		line-height: 1.3;
+  }
 
-	}
-	main {
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		grid-gap: 20px;
-		padding: 30px;
-		h3 {
-			color: var(--cv-primary-color);
-			font-size: 20px;
-			margin: 0;
-			font-weight: 400;
-		}
-		div {
-			display: grid;
-			grid-gap: 20px;
-			border-right: 1px solid var(--cv-tertiary-color);
-		}
-	}
+
+    a {
+      color: var(--cv-primary-color);
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      background-color: var(--cv-secondary-color);
+      margin: 10px 0 ;
+			position: absolute;
+			top: 0;
+      right: 5px;
+    }
+
+  main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+    padding: 30px;
+
+    h3 {
+      color: var(--cv-primary-color);
+      font-size: 18px;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    div {
+      display: grid;
+      grid-gap: 20px;
+      border-right: 1px solid var(--cv-tertiary-color);
+    }
+  }
+
 
 </style>

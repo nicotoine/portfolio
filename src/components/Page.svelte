@@ -1,16 +1,17 @@
 <script lang="ts">
 
-	import  { PageSizes } from '../models/PageSizes';
-	import  { PageLayouts } from '../models/PageLayouts';
+	import { PageSizes } from '../models/PageSizes';
+	import { PageLayouts } from '../models/PageLayouts';
 
 
 	export let size: PageSizes = PageSizes.A4;
 	export let layout: PageLayouts = PageLayouts.Portrait;
-
+	let uuid = crypto.randomUUID();
+	let page: HTMLElement | null;
 
 </script>
 
-<page size={size} layout={layout}>
+<page id={uuid} size={size} layout={layout} bind:this={page}>
 	<slot></slot>
 </page>
 
@@ -18,15 +19,16 @@
     page {
         background: white;
         display: block;
-        margin: 0 auto;
-        margin-bottom: 0.5cm;
+				flex-direction: column;
+        margin: 0 auto 0.5cm;
         box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+        position: relative;
     }
 
     page[size="A4"] {
-        width: 21cm;
-        height: 29.7cm;
-    }
+        width: 793px;
+				height: 1122px;
+	}
 
     page[size="A4"][layout="landscape"] {
         width: 29.7cm;
@@ -57,10 +59,7 @@
         :global(body, page) {
             background: white;
             margin: 0;
-            box-shadow: 0;
+            box-shadow: unset;
         }
     }
-		:global(#navBar){
-			display: none;
-		}
 </style>

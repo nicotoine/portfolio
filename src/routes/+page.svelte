@@ -6,13 +6,14 @@
 	import Skills from '../components/skills/Skills.svelte';
 	import Projetcs from '../components/Projects/Projetcs.svelte';
 	import Schools from '../components/Schools/Schools.svelte';
+	import Header from '../components/Header/Header.svelte';
 
 	onMount(() => {
 		if (!browser) return;
 		document.title = 'Nicolas Devos - Développeur FullStack';
 	});
 </script>
-
+<Header />
 <section id="presentation">
 	<Presentation></Presentation>
 </section>

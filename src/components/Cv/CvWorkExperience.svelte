@@ -71,7 +71,7 @@
 
       h4 {
         color: var(--cv-primary-color);
-        font-size: 17px;
+        font-size: 15px;
         margin: 0;
         font-weight: 600;
       }
@@ -91,17 +91,25 @@
 
         h5 {
           color: var(--cv-primary-color);
-          font-size: 15px;
+          font-size: 13px;
           margin: 0;
           font-weight: 600;
         }
 
         ul {
           margin: 0;
-          padding-left: 20px;
-
+          padding-left: 10px;
           li {
             margin: 0;
+            list-style-type: none;
+            position: relative;
+            padding-left: 10px;
+          }
+
+          li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
           }
         }
       }

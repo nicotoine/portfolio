@@ -39,7 +39,7 @@
 		border-bottom: 1px solid var(--cv-tertiary-color);
     h4 {
       color: var(--cv-primary-color);
-      font-size: 15px;
+      font-size: 13px;
       margin: 0;
       font-weight: 600;
     }
