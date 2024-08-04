@@ -34,9 +34,11 @@
 	"type": "module",
 	"dependencies": {
 		"@eslint/js": "^9.7.0",
+		"@fortawesome/free-solid-svg-icons": "^6.6.0",
 		"@svelte-plugins/tooltips": "^3.0.1",
 		"@sveltejs/adapter-static": "^3.0.2",
 		"gh-pages": "^6.1.1",
-		"siema": "^1.5.1"
+		"siema": "^1.5.1",
+		"svelte-fa": "^4.0.2"
 	}
 }

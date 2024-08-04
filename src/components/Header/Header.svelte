@@ -9,6 +9,7 @@
 	let scrollPosition: number = 0;
 	let displayContactModal: boolean = false;
 	let displayCv: boolean = false;
+
 	onMount(() => {
 		console.log('Header mounted');
 		window.addEventListener('scroll', () => {
@@ -18,7 +19,7 @@
 	let showMenu: boolean = false;
 </script>
 
-<header class:opacity={scrollPosition > 0}>
+<header id="navBar" class:opacity={scrollPosition > 0}>
 	<main>
 		<div id="logo">
 			{#if scrollPosition > 0}
