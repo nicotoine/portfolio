@@ -139,7 +139,7 @@
 		width: 20px;
 		filter: grayscale(100%);
   }
-	.footer__content__right__links:hover  img{
+	.footer__content__right__links a:hover  img{
 		filter: grayscale(0%);
   }
   .footer__content__right__links a {
@@ -159,7 +159,7 @@
   }
 
   .footer__content__right__links a:hover {
-    color: var(--color-primary);
+    color: var(--color-quaternary);
   }
 
   .footer__content__left__contact__item p {
