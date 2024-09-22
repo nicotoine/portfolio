@@ -21,12 +21,10 @@
 
 <header id="navBar" class:opacity={scrollPosition > 0}>
 	<main>
-		<div id="logo">
-			{#if scrollPosition > 0}
-				<Logo fill="black" />
-			{:else}
-				<Logo fill="white"/>
-			{/if}
+		<div id="my-name" class:black={scrollPosition > 0}>
+			<p>
+				Nicolas Devos
+			</p>
 		</div>
 		<span class="burgerIcon">
 				{#if scrollPosition > 0}
@@ -60,10 +58,11 @@
 
 
   header {
-		position: sticky;
-		top: 0;
-		background-color: transparent;
-		z-index: 5;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: transparent;
+    z-index: 5;
     max-height: fit-content;
     transition: all 0.5s;
 
@@ -74,17 +73,20 @@
     &.opacity {
       background-color: white;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-			#logo {
-				opacity: 1;
+
+      #logo {
+        opacity: 1;
       }
+
       .links {
 
-        a,button {
+        a, button {
           color: black;
         }
 
       }
     }
+
     main {
       display: flex;
       flex-direction: row;
@@ -92,16 +94,29 @@
       justify-content: space-between;
       align-items: center;
 
-      #logo {
-        width: 40vw;
-        opacity: 1;
+    	#my-name {
 
-        @media only screen and (min-width: $lg) {
-          width: 13vw;
+        p {
+        color: white;
+          font-size: 1.5rem;
+          font-weight: 500;
+          margin: 0;
+
+        }
+
+        &.black {
+          p {
+
+            color: black;
+          }
+        }
+
+        @media only screen and (min-width: $xl) {
           opacity: 0;
 
         }
       }
+
     }
 
 
@@ -111,18 +126,20 @@
       align-items: center;
       justify-content: flex-end;
       gap: 20px;
-			button {
-				background: transparent;
-				border: none;
-				cursor: pointer;
-          margin: 0 !important;
-          padding: 0 !important;
+
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0 !important;
+        padding: 0 !important;
       }
+
       @media only screen and (max-width: $lg) {
         display: none;
       }
 
-      a,button {
+      a, button {
         color: white;
         text-decoration: none;
         font-size: clamp(1rem, 2vw, 1.5rem);

@@ -29,11 +29,10 @@
 
 <style>
     #presentation {
-        background-color: var(--color-primary);
         position: relative;
         z-index: 1;
         overflow: visible;
-        top: -100px;
+        top: -50px;
         margin-bottom: -100px;
     }
 

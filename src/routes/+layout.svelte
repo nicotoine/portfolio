@@ -13,10 +13,10 @@
     }
 
     :global(:root){
-        --color-primary:#3b5997;
+        --color-primary:#282c67;
         --color-secondary: #333;
         --color-tertiary: #777;
-        --color-quaternary: #008DD5;
+        --color-quaternary: #2cabe3;
         --color-quinary: #333;
         --color-senary: #333;
         --color-septenary: #333;
