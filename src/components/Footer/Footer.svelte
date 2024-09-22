@@ -41,9 +41,9 @@
 						<img src="{base}/LinkedIn.png" alt="linkedin" width="25px">
 						Linkedin
 					</a>
-					<a href="https://github.com/nicotoine">
-						<img src="{base}/github.png" alt="linkedin" width="25px">
-						Github
+					<a href="https://gitlab.com/devos_n">
+						<img src="{base}/gitlab.png" alt="linkedin" width="25px">
+						Gitlab
 					</a>
 				</div>
 			</div>
