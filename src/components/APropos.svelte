@@ -1,6 +1,6 @@
 <div>
 	<h3>
-		Profil Professionnel :
+		Profil Professionnel
 	</h3>
 	<p>
 		Titulaire d'un DUT en Informatique et d'une Licence Professionnelle en Développement Web et Applications, je suis

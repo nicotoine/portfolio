@@ -48,7 +48,7 @@ import SchoolCard from './SchoolCard.svelte';
 		flex-direction: column;
 		align-items: center;
 		gap: 20px;
-		height: 500px;
+		min-height: 500px;
     h3 {
       font-size: 1.7rem;
       margin-bottom: 10px;

@@ -7,6 +7,7 @@
 	import Projetcs from '../components/Projects/Projetcs.svelte';
 	import Schools from '../components/Schools/Schools.svelte';
 	import Header from '../components/Header/Header.svelte';
+	import Footer from '../components/Footer/Footer.svelte';
 
 	onMount(() => {
 		if (!browser) return;
@@ -26,6 +27,9 @@
 <section id="schools">
 	<Schools></Schools>
 </section>
+
+<Footer></Footer>
+
 
 <style>
     #presentation {

@@ -10,7 +10,7 @@
 
 </script>
 <div class="mainDiv">
-	<main style="background-image: url({base}'/me_background.png')">
+	<main style="background-image: url({`'${base}/me_background.png'`})">
 		<section class="pic">
 			<span class="right-background" />
 			<span class="left" />
